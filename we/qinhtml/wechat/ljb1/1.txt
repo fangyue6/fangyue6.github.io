@@ -1,0 +1,10 @@
+ 1604987512@qq.com ljb13512728566
+
+AppID(应用ID) 
+wx30836029e67cbb8a
+AppSecret(应用密钥) 
+25645d899fdeb2477a55ab5882c50e7e
+
+
+/usr/local/nginx/html/bir/wechat
+http://www.fangyue.site/wechat/ljb.php

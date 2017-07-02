@@ -1,0 +1,147 @@
+<html lang="utf-8"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="FY">
+    <meta name="description" content="方月网站 - 这是方月和她女朋友的纪念，用网页的形式记录下来，以便以后留一个纪念，哈哈">
+    <meta name="keywords" content="LQ.F.Y,方月网站,吕琴艳,方月和她女朋友的纪念" >
+    <link rel="icon" href="favicon.ico">
+
+    <title>LQ.F.Y</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min-v3.30.css" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link href="css/jumbotron-narrow.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+   
+    <link rel="stylesheet" href="css/myphoto.css">
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+    <script src="js/myctrl.js"></script>
+  </head>
+
+  <body ng-app="myApp" ng-controller="firstCtrl">
+     <audio id="music2" src="{{music}}"  autoplay="autoplay" loop="loop">你的浏览器不支持audio标签。</audio>
+    <div class="container">
+
+      <!-- <div class="header">
+        <ul class="nav nav-pills pull-right" role="tablist">
+          <li role="presentation" class="active"><a href="#">Home</a></li>
+          <li role="presentation"><a href="#">About</a></li>
+          <li role="presentation"><a href="#">Contact</a></li>
+        </ul>
+
+        <h3 class="text-muted">LQ.F.Y</h3>
+      </div> -->
+
+      <!-- 循环动画start-->
+      <div class="row jumbotron" id='center1'>
+            <div id="center11">
+                <div ng-repeat="item in center11" style="background-image:url({{item.url}});"></div>
+                <!-- <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div> -->
+            </div>
+      </div>
+      <!-- 循环动画end-->
+
+
+    <div class="row marketing">
+      <div class="col-lg-6">
+          <div class="dropdown">
+              <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu4" data-toggle="dropdown">
+                {{dropdownMenu4.time}}
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu4">
+                <li ng-repeat="item in dropdownMenu4.items" role="presentation">
+                  <a role="menuitem" tabindex="-1" href="{{item.href}}" target="_blank">{{item.title}}</a>
+                </li>
+<!--                 <li role="presentation"><a role="menuitem" tabindex="-1" href="" target="_blank">浪漫十一(2)</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="" target="_blank">浪漫十一(3)</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="" target="_blank">浪漫十一(4)</a></li> -->
+              </ul>
+            </div>
+            <p>{{dropdownMenu4.des}}</p>
+
+            <div class="dropdown">
+              <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown">
+                {{dropdownMenu3.time}}
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu3">
+                <li ng-repeat="item in dropdownMenu3.items" role="presentation"><a role="menuitem" tabindex="-1" href="{{item.href}}" target="_blank">{{item.title}}</a></li>
+<!--                 <li role="presentation"><a role="menuitem" tabindex="-1" href="8text-pixel/index.html" target="_blank">爆炸文字</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="7swing-text/index.html" target="_blank">魔力文字</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="5roller-coaster/index.html" target="_blank">过山车</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="2fox-run/index.html" target="_blank">奔跑的狐狸</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="1cake/index.html" target="_blank">生日蛋糕</a></li> -->
+              </ul>
+            </div>
+            <p>{{dropdownMenu3.des}}</p>
+
+            <div class="dropdown">
+              <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">
+                {{dropdownMenu2.time}}
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+                <li ng-repeat="item in dropdownMenu2.items" role="presentation"><a role="menuitem" tabindex="-1" href="{{item.href}}" target="_blank">{{item.title}}</a></li>
+              </ul>
+            </div>
+          <p>{{dropdownMenu2.des}}</p>
+
+          <div class="dropdown">
+              <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                {{dropdownMenu1.time}}
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                <li ng-repeat="item in dropdownMenu1.items" role="presentation"><a role="menuitem" tabindex="-1" href="{{item.href}}" target="_blank">{{item.title}}</a></li>
+              </ul>
+            </div>
+          <p>{{dropdownMenu1.des}}</p>
+
+
+      </div>
+   </div>
+     <div class="row">
+        <div class="footer">
+          <p>© FY 2016</p>
+        </div>
+    </div>
+  </div>
+
+     <!-- /container -->
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入-->
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+     <script type="text/javascript">
+    /*function goto(href){
+      window.location.href=href;
+      //window.open(href)
+    }*/
+    </script>
+
+</body></html>

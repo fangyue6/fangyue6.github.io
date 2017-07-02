@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<script src="bootstrap/js/jquery.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<title>添加教师信息</title>
+</head>
+<body>
+	<div class="container">
+		<form action="insert.php" method="post" class="form-horizontal">
+			<div class="form-group">
+				<label for="teaNumber" class="col-lg-2 col-md-2 col-xs-2 text-right">教工号</label>
+				<div class="col-lg-4 col-md-4 col-xs-4">
+					<input type="text" name="teaNumber" id="teaNumber" class="form-control">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="name" class="col-lg-2 col-md-2 col-xs-2 text-right">姓名</label>
+				<div class="col-lg-4 col-md-4 col-xs-4">
+					<input type="text" name="name" id="name" class="form-control">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="birth" class="col-lg-2 col-md-2 col-xs-2 text-right">生日</label>
+				<div class="col-lg-4 col-md-4 col-xs-4">
+					<input type="text" name="birth" id="birth" class="form-control">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="gender" class="col-lg-2 col-md-2 col-xs-2 text-right">性别</label>
+				<div  class="col-lg-4 col-md-4 col-xs-4">
+					<input type="text" name="gender" id="gender" class="form-control">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="other" class="col-lg-2 col-md-2 col-xs-2 text-right">其他</label>
+				<div class="col-lg-4 col-md-4 col-xs-4">
+					<input type="text" name="other" id="other" class="form-control">
+				</div>
+			</div>
+			<div class="form-group">
+				<input type="submit" class="btn btn-primary col-md-offset-3" />
+			</div>
+		</form>
+		<form  method="post" action="query1.php" class="form-horizontal">
+				<div class="form-group">
+					<div class="col-lg-2 col-md-2 col-xs-4 col-md-offset-2">
+						<input type="text" name="query1" class="form-control">
+					</div>
+						<input type="submit" value="查询" class=" btn btn-primary"/>
+				</div>
+		</form>
+		<br>
+		<a href="query.php" class="btn btn-primary col-md-offset-3">显示所有</a>
+	</div>
+</body>
+</html>

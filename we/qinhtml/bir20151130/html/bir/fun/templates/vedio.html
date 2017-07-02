@@ -1,0 +1,156 @@
+<!doctype>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+
+    <link href="http://vjs.zencdn.net/5.0.2/video-js.css" rel="stylesheet">
+    <!-- If you'd like to support IE8 -->
+    <script src="http://vjs.zencdn.net/ie8/1.1.0/videojs-ie8.min.js"></script>
+
+    <style>
+        @media screen and (min-width: 700px){
+            video{
+                width:650px
+            }
+        }
+
+        @media screen and (max-device-width:700px) and (-webkit-device-width:700px),  screen and (max-width:700px){
+            video{
+                width:600px;
+            }
+        }
+
+        @media screen and (max-device-width:600px), screen and (max-width:600px){
+            video{
+                width:500px;
+            }
+        }
+        @media screen and (max-device-width:500px), screen and (max-width:500px){
+            video{
+                width:400px;
+            }
+        }
+        @media screen and (max-device-width:400px), screen and (max-width:400px){
+            video{
+                width:300px;
+            }
+        }
+    </style>
+
+
+
+
+
+</head>
+
+<body >
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">ItisYue</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <form class="navbar-form navbar-right">
+                <div class="form-group">
+                    <input type="text" placeholder="Email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-success">Sign in</button>
+            </form>
+        </div><!--/.navbar-collapse -->
+    </div>
+</nav>
+<br>
+<br>
+<div class="jumbotron">
+    <div class="container" style="text-align: center">
+        <br>
+        <br>
+        <p class="btn-info">亲爱的：生命中的每一天都在为你祝福，因为我生活中的时时刻刻都在惦记你!真诚的祝愿你生日快乐!</p>
+        <p class="btn-success">我想你的时候最缠绵，无论我们相距多远，前面的路有多坎坷，只想说：你是我今生最大的幸福。祝你生日快乐。</p>
+
+        <div class="row">
+            <div class="col-xs-9 col-sm-9">
+                <h1 style="color: #9356BC">The Vedio Of Your BirthDay</h1>
+            </div>
+            <div class="col-xs-3 col-sm-3">
+                <div class="row">
+                    <a href="http://v.youku.com/v_show/id_XMTM3NzMzNTYxMg==.html" target="_blank" class="btn btn-danger">优酷播放</a>
+                </div>
+                <div class="row">
+                    <span >密码:<span style="color: green">1314520</span></span>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="row">
+            <video id="my-video" class="video-js" src="http://7xnzsl.com1.z0.glb.clouddn.com/birthday_720_480.mp4" controls preload="auto" style="margin: auto"
+                   poster="show.jpg" data-setup="{}">
+
+                <p class="vjs-no-js">
+                    To view this video please enable JavaScript, and consider upgrading to a web browser that
+                    <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
+            </video>
+        </div>
+
+    </div>
+</div>
+
+
+
+<script src="http://vjs.zencdn.net/5.0.2/video.js"></script>
+<script type="text/javascript">
+    /* $(document).ready(function(){
+     var clientWidth = (document.body.clientWidth * 0.8)+'px';
+     document.getElementById("my-video").style.width = clientWidth;
+     $(window).on("resize",function(){
+     var clientWidth = (document.body.clientWidth * 0.8)+'px';
+     $("#my-video").hide();
+
+     document.getElementById("my-video").style.width = clientWidth;
+     $("#my-video").show();
+     });
+
+     });*/
+</script>
+
+</body>
+</html>
+
+
+
+<!--
+<video id="my-video" class="video-js" width="640" height="264" controls preload="auto"
+       poster="show.jpg" data-setup="{}">
+    <source src="http://111.12.83.36:83/1Q2W3E4R5T6Y7U8I9O0P1Z2X3C4V5B/fangyue01-php.stor.sinaapp.com/vedio%2Fbirthday_720_480.mp4" type='video/mp4'>
+    <p class="vjs-no-js">
+        To view this video please enable JavaScript, and consider upgrading to a web browser that
+        <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    </p>
+</video>-->

@@ -1,0 +1,45 @@
+#sidebar{
+width:266px;
+height:850px;
+background:#fff;
+float:left;
+border-right:1px #ccc solid;
+}
+#sidebar embed{
+width:220px;
+height:200px;
+display:block;
+margin:0 auto;
+margin-top:10px;
+}
+#content{
+width:600px;
+height:850px;
+background:#fff;
+float:left;
+}
+#content h1{
+font-size:100%;
+background:url(../images/aboutme.gif) no-repeat ;
+height:26px;
+width:127px;
+margin-left:20px;
+margin-top:20px;
+text-indent:-9999px;
+}
+#content img{
+width:529px;
+height:185px;
+display:block;
+padding-left:15px;
+
+}
+#content p{
+margin:2px 60px 0 20px;
+font-size:10px;
+text-indent:20px;
+line-height:180%;
+color:#666;
+}
+#content p span{
+color:#0066FF;}

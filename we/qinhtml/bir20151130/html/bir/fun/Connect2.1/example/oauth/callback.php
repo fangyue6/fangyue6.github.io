@@ -1,0 +1,6 @@
+<?php
+require_once("../../API/qqConnectAPI.php");
+$qc = new QC();
+echo $qc->qq_callback();
+echo $qc->get_openid();
+echo "<h1>1111111</h1>";

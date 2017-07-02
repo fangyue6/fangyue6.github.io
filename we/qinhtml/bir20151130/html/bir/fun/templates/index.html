@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FangYue`s</title>
+</head>
+<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script src="js/my.js"></script>
+<script type="text/javascript">
+    function next(){
+        var h1=$("#travel .span12 .row .span6 .block-left h1").text();
+        var p0=$("#travel .span12 .row .span6 .block-left p:eq(0)").text();
+        var p1=$("#travel .span12 .row .span6 .block-left p:eq(1)").text();
+        alert(p0);
+       // alert(p1);
+    }
+</script>
+<body>
+<!--<audio id="music2" src="http://7xnvy7.com1.z0.glb.clouddn.com/geiwoyigewen.mp3"  autoplay="autoplay" loop="loop">你的浏览器不支持audio标签。</audio>-->
+
+<div class="navbar-wrapper">
+    <div class="container">
+        <div class="navbar navbar-inverse">
+            <div class="navbar-inner">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="brand" href="#">ItisYue的网站</a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li class="active"><a href="#">首页</a></li>
+                        <li><a href="#about">关于我</a></li>
+                        <{if $flag==0}>
+                            <li><a data-toggle="modal" href="#login">登陆</a></li>
+                            <li><a data-toggle="modal" href="#register">注册</a></li>
+                            <{else}>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">欢迎您:<{$nickname}><b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <{if $flag==1 and ($username=='fangyue' or $username=='lvqinyan')}>
+                                    <li><a href="../mywebpage/index.html" target="_blank">关于我们</a></li>
+                                    <{/if}>
+                                    <li><a href="control/logout.php">退出</a></li>
+                                </ul>
+                            </li>
+                        <{/if}>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="height: 100px">
+</div>
+<article class="container">
+    <section class="row" id="travel">
+        <div class="span12 panel" style="display: block;">
+            <div class="row">
+                <!--最新笑话，动态，新闻，等   start-->
+                <div class="span6">
+                    <div class="block-left">
+                        <h1><{$fun['title']}></h1>
+                        <p class="wo"><{$fun['content']}></p>
+                        <br>
+                        <!--<button class="btn" onclick="next()">next</button>-->
+
+                        <!-- 注册Modal start-->
+                        <div id="register" aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" class="modal hide fade" style="text-align: center">
+                            <div class="modal-header">
+                                <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                                <h3 id="myModalLabel">注册</h3>
+                            </div>
+                            <form action="control/register.php" onsubmit="return register()" method="post">
+                            <div class="input-group" style="text-align: center">
+
+                                <span class="input-group-addon" id="basic-addon1">用户名:&nbsp</span>
+                                <input type="text" class="form-control" placeholder="Username" name="username" aria-describedby="basic-addon1" required="required" id="register_username" ><span id="register_username_message" style="color: red"></span><br>
+
+                                <span class="input-group-addon" id="basic-addon2">输入密码:</span>
+                                <input type="password" class="form-control" placeholder="请输入密码" name="password" aria-describedby="basic-addon1" required="required" id="register_password"><span id="register_password_message" style="color: red"></span><br>
+
+                                <span class="input-group-addon" id="basic-addon3">确认密码:</span>
+                                <input type="password" class="form-control" placeholder="请再次输入密码" aria-describedby="basic-addon1" required="required" id="register_password1"><span id="register_password1_message" style="color: red"></span><br>
+
+                                <span class="input-group-addon" >输入邮箱:</span>
+                                <input type="email" class="form-control" placeholder="abc@qq.com" name="email" aria-describedby="basic-addon1"   required="required" id="register_email">
+                                <span id="registe_email_message" style="color: red"></span><br>
+
+                                <span class="input-group-addon" >输入昵称:</span>
+                                <input type="text" class="form-control" placeholder="德玛西亚" name="nickname" aria-describedby="basic-addon1" required="required" id="register_nickname">
+                                <span id="register_nickname_message" style="color: red"></span><br>
+
+                            </div>
+                                <input type="submit" class="btn" value="注册">
+                           <!-- <button class="btn" onclick="register()">注册</button>-->
+                            </form>
+                            <div class="modal-footer">
+                                <button aria-hidden="true" data-dismiss="modal" class="btn">关闭</button>
+                            </div>
+                        </div>
+                        <!-- 注册Modal end-->
+
+                        <!-- 登陆Modal start-->
+                        <div id="login" aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" class="modal hide fade" style="text-align: center">
+                            <div class="modal-header">
+                                <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                                <h3>登陆</h3>
+                            </div>
+
+                            <div class="input-group" style="text-align: center">
+                                <span class="input-group-addon" >用户名:&nbsp</span>
+                                <input type="text" class="form-control" placeholder="用户名/邮箱" aria-describedby="basic-addon1" required="required" id="login_username">
+                                <span id="login_username_message" style="color: red"></span>
+                                <br>
+
+                                <span class="input-group-addon">输入密码:</span>
+                                <input type="password" class="form-control" placeholder="请输入密码"   aria-describedby="basic-addon1" required="required" id="login_password">
+                                <span id="login_password_message" style="color: red"></span>
+                                <br>
+
+                            </div>
+                            <button class="btn" onclick="login()">登陆</button>
+                            <div class="modal-footer">
+                                <button aria-hidden="true" data-dismiss="modal" class="btn">关闭</button>
+                            </div>
+                        </div>
+                        <!-- 登陆Modal end-->
+                    </div>
+                </div>
+                <!--最新笑话，动态，新闻，等   end-->
+
+                <!--最新笑话，动态，新闻的图片   start-->
+                <div class="span6">
+                    <div style="text-align: right">
+                        <img src="<{$fun['pic']}>" height="400" width="400" />
+                    </div>
+                </div>
+                <!--最新笑话，动态，新闻的图片   end-->
+            </div>
+            <!--<div style="border-bottom:1px dashed;color: red"></div>-->
+        </div>
+
+        <!--留言区域start-->
+        <{if $flag==1}>
+        <div class="span12 panel" style="display: block;">
+            <div class="row">
+                <div class="span6">
+                    <div class="block-left">
+                        <h1>留言给:</h1>
+                        <select id="friendid">
+                            <{foreach $friends as $friend}>
+                            <option value="<{$friend['id']}>"><{$friend['nickname']}></option>
+                            <{/foreach}>
+                        </select>
+
+
+                       <textarea rows="5" cols="200" name="message" id="message" style="text-align: left" >
+                        </textarea>
+                        <br>
+                        <button class="btn" onclick="talk()">发表</button>
+                    </div>
+                </div>
+                <div style="text-align: right;float: right">
+                    <h2 style="text-align: center">留言板</h2>
+                    <div id="show_message" style="width:400px; height:400px; overflow:auto; text-align: left">
+                        <{foreach $message as $me}>
+                                <span>
+                                    在<span style="color: #7f0055">
+                                     <{$me['datetime']|date_format:"%Y-%m-%d %H:%M:%S"}>
+                                    </span>
+                                    <span style="color: #885500"><{$me['formNickName']}></span>
+                                    给<span style="color: #88ff44"><{$me['toNickName']}></span>留言：
+                                </span><br>
+                                <{if $me['datetime']%3==0}>
+                                <span style="color: red;"><{$me['content']}></span>
+                                <{elseif $me['datetime']%2==0}>
+                                <span style="color: green;"><{$me['content']}></span>
+                                <{else}>
+                                <span style="color: blue;"><{$me['content']}></span>
+
+                                <{/if}>
+                        <hr>
+                        <{/foreach}>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <{/if}>
+        <!--留言区域end-->
+    </section>
+
+
+    <section class="row">
+        <!--时间轴  start-->
+        <{if $flag==1 and ($username=='fangyue' or $username=='lvqinyan')}>
+        <div class="span12 panel" style="display: block;text-align: center">
+            <div class="row" style="text-align: center" id="timezone">
+                <button class="btn btn-primary" type="button">
+                    时间轴： <span class="badge">1/9</span>
+                </button>
+                <button type="button" class="btn"><a style="color: #040404">08:00以前</a></button>
+                <button type="button" class="btn"><a style="color: #040404">08:00</a></button>
+                <button type="button" class="btn"><a style="color: #040404">10:00</a></button>
+                <button type="button" class="btn"><a style="color: #040404">12:00</a></button>
+                <button type="button" class="btn"><a style="color: #040404">14:00</a></button>
+                <button type="button" class="btn"><a style="color: #040404">16:00</a></button>
+                <button type="button" class="btn"><a style="color: #040404">18:00</a></button>
+                <button type="button" class="btn"><a style="color: #040404">20:00</a></button>
+                <button type="button" class="btn"><a style="color: #040404">20:00以后</a></button>
+            </div>
+        </div>
+        <{/if}>
+        <!--时间轴  end-->
+
+        <!--根据生日预测结婚  start-->
+        <div class="span12 panel" style="display: block;text-align: center">
+            <div class="row" style="text-align: center" id="birthday">
+                <!-- /.col-lg-6 -->
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <h1 style="color: #00cc00">从出生年月看你几岁结婚？准到你尖叫！！！</h1>
+                        <span style="color: red;font-size: large">选择你的农历生日(00后略过哟):</span><input type="date" class="form-control" placeholder="请输入阴历(农历)生日" id="jisuanbirthday">
+                          <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" onclick="jisuanBirthday()">Go!</button>
+                          </span>
+                    </div><!-- /input-group -->
+                </div><!-- /.col-lg-6 -->
+                <div class="span12" >
+                    <div style="text-align: center" id="showbirthday">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!--根据生日预测结婚  end-->
+    </section>
+
+
+</article>
+
+</body>
+<script>
+    timezone();
+</script>
+</html>

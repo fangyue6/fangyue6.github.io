@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo</title>
+	<style>
+	
+		@media and (max-device-width:700px)  and (min-device-width:600px), 
+			screen and (max-width: 700px)  and (min-width: 600px){
+			video{
+				width:600px;
+			}
+		}
+		
+	    @media and (max-device-width:600px) and (min-device-width:500px), 
+			screen and (max-width: 600px)  and (min-width: 500px){
+			video{
+				width:500px;
+			}
+		}
+		@media and (max-device-width:500px) and (min-device-width:320px), 
+			screen and (max-width: 500px)  and (min-width: 320px){
+			video{
+				width:300px;
+			}
+		}
+		@media and (max-device-width:320px), 
+		 screen and (max-width: 320px){
+			video{
+				width:300px;
+			}
+		}
+		@media and (min-device-width:800px), screen and (min-width: 800px){
+			video{
+				width:800px;
+			}
+		}
+        .demo{margin:60px auto}
+        .audio{margin-top:20px}
+	</style>
+</head>
+<!--<script src="../js/html5media.min.js"></script>-->
+<body style="text-align: center">
+<div id="main" style="text-align: center">
+
+    <div class="demo" >
+        <video class="video" poster="show.jpg" width="618" height="347" controls preload>
+            <source src="../vedio/birthday_720_480.mp4" media="only screen and (min-device-width: 568px)"></source>
+            <source src="../vedio/birthday_720_480.mp4" media="only screen and (max-device-width: 568px)"></source>
+            <source src="../vedio/birthday_720_480.mp4"></source>
+        </video>
+    </div>
+
+<!--    <div class="demo" >
+        <video class="video" poster="show.jpg" width="618" height="347" controls preload>
+            <source src="http://fangyue01.sinaapp.com/php/vedio/birthday_1024_768.mp4" media="only screen and (min-device-width: 568px)"></source>
+            <source src="http://fangyue01.sinaapp.com/php/vedio/birthday_1024_768.mp4" media="only screen and (max-device-width: 568px)"></source>
+            <source src="../vedio/birthday_1024_768.mp4"></source>
+        </video>
+    </div>-->
+</div>
+</body>
+</html>

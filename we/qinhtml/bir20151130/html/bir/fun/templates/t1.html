@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+    <link rel="stylesheet" href="http://files.cnblogs.com/rubylouvre/bootstrap.css"/>
+    <script src="http://files.cnblogs.com/rubylouvre/jquery1.83.js" > </script>
+    <script src="http://files.cnblogs.com/rubylouvre/bootstrap-transition.js"></script>
+    <script src="http://files.cnblogs.com/rubylouvre/bootstrap-modal.js"></script>
+</head>
+<body>
+<h1>你好，世界！</h1>
+
+
+<input id="btntext" type="button" value="添加文本组件" data-toggle="modal" data-target="#myModal"/>
+<!-- Modal -->
+<div class="modal hide fade" id="myModal" tabindex="-1" role="dialog" style="width: 200px;height: 200px">
+    <div class="modal-header"><button class="close" type="button" data-dismiss="modal">×</button>
+        <h3 id="myModalLabel">Modal header</h3>
+    </div>
+    <div class="modal-body"></div>
+</div>
+
+
+<!-- 触发模态弹出窗的元素 -->
+<button type="button" data-toggle="modal" data-target="#mymodal1" class="btn btn-primary">点击我会弹出模态弹出窗</button>
+<!-- 模态弹出窗 -->
+<div class="modal fade" id="mymodal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <h2>ssss</h2>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

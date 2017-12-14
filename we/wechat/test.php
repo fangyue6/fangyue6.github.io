@@ -29,7 +29,8 @@ $result=($str->results);
 }
 function text(){
 	$receiveText="天气武汉天气武汉";
-	 if(!empty(strstr($receiveText,"天气1"))){
+  $res = strstr($receiveText,"天气1");
+	 if(!empty($res)){
 	 	echo "不为空";
     }
 	//echo strpos($info,"天气");

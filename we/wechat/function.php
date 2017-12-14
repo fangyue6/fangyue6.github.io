@@ -18,7 +18,7 @@ $options = array(
    'token'=>'itisyue', //填写你设定的key
    'encodingaeskey'=>'VYsFSxoLhicWa402JqvDS8q5v9rU5fVoqWzlc60Tg3P', //填写加密用的EncodingAESKey
    'appid'=>'wx19a00dfc26b462ca', //填写高级调用功能的app id
-   'appsecret'=>'42c2acf7763f692a51e502ace814801a' //填写高级调用功能的密钥
+   'appsecret'=>'2383d2a501bf721fd5b2b9dafc444b94' //填写高级调用功能的密钥
  );
 $weObj = new Wechat($options);
 $weAPI = new wechatCallbackapi();
@@ -69,26 +69,26 @@ $common = array
 ( 
   array
   ( 
-    'Title'=>"欢迎光临吕琴艳的微信公众平台", 
-    'PicUrl'=>'http://www.fangyue.site/wechat/image/welcome.jpg', 
-    'Url'=>'http://www.fangyue.site'
+    'Title'=>"欢迎光临方月的个人主页", 
+    'PicUrl'=>'http://qin.fangyue.xyz/fangyue6.github.io/we/wechat/image/welcome.jpg', 
+    'Url'=>'http://www.fangyue.xyz'
   ),    
   array
   ( 
     'Title'=>"功能1：发送图片可以查询照片中人脸的年龄和性别信息哦，发送一张两人合影的照片可以计算两人的相似程度", 
-    'PicUrl'=>'http://www.fangyue.site/wechat/image/sim.jpg', 
+    'PicUrl'=>'http://qin.fangyue.xyz/fangyue6.github.io/we/wechat/image/sim.jpg', 
     'Url'=>''
   ),  
   array
   ( 
     'Title'=>"功能2：手机归属地查询(手机 12345678900);天气查询(武汉天气 或者 天气武汉)", 
-    'PicUrl'=>'http://www.fangyue.site/wechat/image/sim.jpg', 
+    'PicUrl'=>'http://qin.fangyue.xyz/fangyue6.github.io/we/wechat/image/sim.jpg', 
     'Url'=>''
   ),  
   array
   ( 
     'Title'=>"功能3：点击加号，发送地理位置，可以查询天气预报", 
-    'PicUrl'=>'http://www.fangyue.site/wechat/image/sim.jpg', 
+    'PicUrl'=>'http://qin.fangyue.xyz/fangyue6.github.io/we/wechat/image/sim.jpg', 
     'Url'=>''
   ),
     array
@@ -100,7 +100,7 @@ $common = array
   array
   ( 
     'Title'=>"获取帮助:    help   或者   帮助 ", 
-    'PicUrl'=>'http://www.fangyue.site/wechat/image/sim.jpg', 
+    'PicUrl'=>'http://qin.fangyue.xyz/fangyue6.github.io/we/wechat/image/sim.jpg', 
     'Url'=>''
   ) 
 );
@@ -164,21 +164,24 @@ switch($type) {
     }*/
 
     //查询天气   武汉天气    天气武汉
-    if(!empty(strstr($receiveText,"天气"))){
+    $weather_res = strstr($receiveText,"天气");
+    if(!empty($weather_res)){
       $city=substr_replace($receiveText,"",strpos($receiveText,"天气"),strlen("天气"));
       $weather = new Weather("kdwHadg2uArbzKHMnT0UNIsv",$city,"json");
       $weObj->news($weather->getResult())->reply(); 
     }
     
     //手机归属地    15071098070手机  手机15071098070
-    if(!empty(strstr($receiveText,"手机"))){
+    $phone_res = strstr($receiveText,"手机");
+    if(!empty($phone_res)){
       $phoneText=substr_replace($receiveText,"",strpos($receiveText,"手机"),strlen("手机"));
       $phone=new Phone($phoneText,"6c2d3c3c400f06da907e79a19cfd457a");
       $weObj->text($phone->getResult())->reply(); 
     }
 
-    //推荐系统    
-    if(!empty(strstr($receiveText,"推荐系统"))){
+    //推荐系统  
+    $recommend_res = strstr($receiveText,"推荐系统");
+    if(!empty($recommend_res)){
       $content = array();
       $content[] = array("Title"=>"利用投简历模拟推荐系统", "Description"=>"", "PicUrl"=>"http://www.fangyue.site/wechat/image/recommend.jpg", "Url" =>'http://www.fangyue.site:8080/Qin/recommend/AdminDeliverAction_check.action?openID='.$fromUsername);
       $weObj->news($content)->reply(); 

@@ -1,5 +1,6 @@
 <?php 
 /** 
+http://139.199.189.112
  * WeeGo工作室微信公众平台接口源码 
  * @author CallMeWhy <wanghaiyang@139.me> 
  * @version 1.0 
@@ -70,37 +71,37 @@ $common = array
   array
   ( 
     'Title'=>"欢迎光临方月的个人主页", 
-    'PicUrl'=>'http://qin.fangyue.xyz/fangyue6.github.io/we/wechat/image/welcome.jpg', 
+    'PicUrl'=>'http://139.199.189.112/fangyue6.github.io/we/wechat/image/welcome.jpg', 
     'Url'=>'http://www.fangyue.xyz'
   ),    
   array
   ( 
     'Title'=>"功能1：发送图片可以查询照片中人脸的年龄和性别信息哦，发送一张两人合影的照片可以计算两人的相似程度", 
-    'PicUrl'=>'http://qin.fangyue.xyz/fangyue6.github.io/we/wechat/image/sim.jpg', 
+    'PicUrl'=>'http://139.199.189.112/fangyue6.github.io/we/wechat/image/sim.jpg', 
     'Url'=>''
   ),  
   array
   ( 
     'Title'=>"功能2：手机归属地查询(手机 12345678900);天气查询(武汉天气 或者 天气武汉)", 
-    'PicUrl'=>'http://qin.fangyue.xyz/fangyue6.github.io/we/wechat/image/sim.jpg', 
+    'PicUrl'=>'http://139.199.189.112/fangyue6.github.io/we/wechat/image/sim.jpg', 
     'Url'=>''
   ),  
   array
   ( 
     'Title'=>"功能3：点击加号，发送地理位置，可以查询天气预报", 
-    'PicUrl'=>'http://qin.fangyue.xyz/fangyue6.github.io/we/wechat/image/sim.jpg', 
+    'PicUrl'=>'http://139.199.189.112/fangyue6.github.io/we/wechat/image/sim.jpg', 
     'Url'=>''
   ),
     array
   ( 
     'Title'=>"功能4：发送 推荐系统   利用投简历模拟推荐系统", 
-    'PicUrl'=>'http://www.fangyue.site/wechat/image/sim.jpg', 
+    'PicUrl'=>'http://139.199.189.112/wechat/image/sim.jpg', 
     'Url'=>'http://www.fangyue.site:8080/Qin/recommend/AdminDeliverAction_check.action?openID='.$fromUsername 
   ),
   array
   ( 
     'Title'=>"获取帮助:    help   或者   帮助 ", 
-    'PicUrl'=>'http://qin.fangyue.xyz/fangyue6.github.io/we/wechat/image/sim.jpg', 
+    'PicUrl'=>'http://139.199.189.112/fangyue6.github.io/we/wechat/image/sim.jpg', 
     'Url'=>''
   ) 
 );
